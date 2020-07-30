@@ -105,6 +105,9 @@ h1, h2, h3 {
   width: 100%;
   top: 0;
 }
+#nav .custom-logo {
+  width: 160px;
+}
 
 #carousel .carousel-item {
   background-size: 100%;
@@ -152,13 +155,13 @@ h1, h2, h3 {
   animation-duration: 1s;
 }
 #carousel .slide-1 {
-  background-image: url("/images/slide-1.jpg");
+  background-image: url("/wp-content/themes/wp-my-store/images/slide-1.jpg");
 }
 #carousel .slide-2 {
-  background-image: url("/images/slide-2.jpg");
+  background-image: url("/wp-content/themes/wp-my-store/images/slide-2.jpg");
 }
 #carousel .slide-3 {
-  background-image: url("/images/slide-3.jpg");
+  background-image: url("/wp-content/themes/wp-my-store/images/slide-3.jpg");
 }
 #carousel .carousel-control-next, #carousel .carousel-control-prev {
   width: 55px;
@@ -254,7 +257,6 @@ body > #featured-products {
   width: 200px;
   height: 1px;
   background: #ccc;
-  display: inline-block;
   float: left;
   margin-top: 1.2rem;
 }
@@ -262,7 +264,6 @@ body > #featured-products {
   width: 200px;
   height: 1px;
   background: #ccc;
-  display: inline-block;
   float: right;
   margin-top: 1.2rem;
 }
@@ -427,7 +428,6 @@ body > #best-seller {
   width: 200px;
   height: 1px;
   background: #ccc;
-  display: inline-block;
   float: left;
   margin-top: 1.2rem;
 }
@@ -435,7 +435,6 @@ body > #best-seller {
   width: 200px;
   height: 1px;
   background: #ccc;
-  display: inline-block;
   float: right;
   margin-top: 1.2rem;
 }
@@ -573,7 +572,6 @@ body > #blog {
   width: 200px;
   height: 1px;
   background: #ccc;
-  display: inline-block;
   float: left;
   margin-top: 1.2rem;
 }
@@ -581,7 +579,6 @@ body > #blog {
   width: 200px;
   height: 1px;
   background: #ccc;
-  display: inline-block;
   float: right;
   margin-top: 1.2rem;
 }
@@ -608,7 +605,6 @@ body > #brand-logos {
   font-size: 1.1rem;
 }
 
-/* footer */
 #footer {
   color: #666;
   font-size: 0.8rem;
@@ -689,7 +685,6 @@ body > #brand-logos {
   display: block;
 }
 
-/* footer */
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1350px;

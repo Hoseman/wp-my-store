@@ -187,3 +187,44 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/* enqueue custom styles */
+function ah_enqueue(){
+    $uri = get_template_directory_uri();
+	wp_register_style('ah_google_fonts_1', 'https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+	wp_register_style('ah_google_fonts_2', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+    wp_register_style('ah_bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+    wp_register_style('ah_font_awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	wp_register_style('ah_main', $uri . '/css/main.css');
+	wp_register_style('ah_owl', $uri . 'css/owl.carousel.min.css');
+
+	wp_enqueue_style('ah_google_fonts_1');
+	wp_enqueue_style('ah_google_fonts_2');
+    wp_enqueue_style('ah_bootstrap');
+    wp_enqueue_style('ah_font_awesome');
+	wp_enqueue_style('ah_main');
+	wp_enqueue_style('ah_owl');
+
+    wp_register_script('ah_jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', [], false, true);
+    wp_register_script('ah_popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', [], false, true);
+    wp_register_script('ah_bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', [], false, true);
+	wp_register_script('ah_mainjs', $uri . '/js/main.js', [], false, true);
+	wp_register_script('ah_owljs', $uri . '/js/owl.carousel.min.js', [], false, true);
+
+    wp_enqueue_script('ah_jquery');
+    wp_enqueue_script('ah_popper');
+    wp_enqueue_script('ah_bootstrapjs');
+	wp_enqueue_script('ah_mainjs');
+	wp_enqueue_script('ah_owljs');
+}
+
+add_action( 'wp_enqueue_scripts', 'ah_enqueue' );
+/* enqueue custom styles */
+
+/* Enable SVG Support */
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
+  /* Enable SVG Support */

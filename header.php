@@ -19,12 +19,7 @@
 	<meta name="description" content="">
     <meta name="author" content="">
     <title>Shop Theme | By Andrew Hosegood</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php bloginfo('stylesheet_directory'); ?>/css/main.css" rel="stylesheet">
-    <link href="<?php bloginfo('stylesheet_directory'); ?>/css/owl.carousel.min.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="images/ico/favicon.ico">
 
 	<?php wp_head(); ?>
@@ -53,8 +48,8 @@
 
 <!-- Main Nav -->
 <header id="nav">
-    <nav class="navbar navbar-expand-md navbar-light bg-white main-menu-container">
-        <a class="navbar-brand" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png"></a>
+    <nav class="navbar navbar-expand-md navbar-light bg-white main-menu-container" >
+        <a class="navbar-brand" href="#"><?php the_custom_logo(); ?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
