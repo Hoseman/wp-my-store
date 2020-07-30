@@ -271,9 +271,30 @@ get_header();
 
 
 
-<!-- Two Panels Content goes in here -->
-
-<!-- Two Panels Content goes in here -->
+    <!-- Two Panels -->
+    <section id="two-panels">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 promo-wrapper">
+                    <div class="promo-box-text box-1">
+                        <h2>70% Off</h2>
+                        <p>Vivamus tempor leo lacus, feugiat ut magna aliquam erat.</p>
+                        <a class="btn btn-carousel">VIEW MORE</a>
+                    </div>
+                    <img src="images/promo-box-1.jpg" class="two-panels-img-1">
+                </div>
+                <div class="col-sm-6">
+                    <div class="promo-box-text box-2">
+                        <h2>Free Shipping</h2>
+                        <p>Vivamus tempor leo lacus, feugiat ut magna aliquam erat.</p>
+                        <a class="btn btn-carousel">VIEW MORE</a>
+                    </div>
+                    <img src="images/promo-box-2.jpg" class="two-panels-img-2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Two Panels -->
 
 
 
