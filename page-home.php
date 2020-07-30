@@ -271,6 +271,12 @@ get_header();
 
 
 
+<!-- Two Panels Content goes in here -->
+
+<!-- Two Panels Content goes in here -->
+
+
+
 
 <?php
 //get_sidebar();
