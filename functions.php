@@ -196,7 +196,7 @@ function ah_enqueue(){
     wp_register_style('ah_bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
     wp_register_style('ah_font_awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_register_style('ah_main', $uri . '/css/main.css');
-	wp_register_style('ah_owl', $uri . 'css/owl.carousel.min.css');
+	wp_register_style('ah_owl', $uri . '/css/owl.carousel.min.css');
 
 	wp_enqueue_style('ah_google_fonts_1');
 	wp_enqueue_style('ah_google_fonts_2');

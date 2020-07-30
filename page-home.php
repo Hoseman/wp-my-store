@@ -170,7 +170,49 @@ get_header();
                 </div>
             </div>        
         </section>
-        <!-- Seasonal Collection -->        
+        <!-- Seasonal Collection --> 
+
+
+
+        <!-- Best Sellers -->
+        <section id="best-seller" class="text-center">
+            <div class="section-heading">
+                <span class="underline-left"></span>
+                <h2>Best Sellers</h2>
+                <span class="underline-right"></span>
+            </div>
+            <h4>Must have products from our top sellers..</h4>
+            <div class="container text-left">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-1.jpg" alt="Best Seller" class="best-seller">
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-2.jpg" alt="Best Seller" class="best-seller">
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-3.jpg" alt="Best Seller" class="best-seller">
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-4.jpg" alt="Best Seller" class="best-seller">
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-5.jpg" alt="Best Seller" class="best-seller">
+                            </div>
+                            <div class="item">
+                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-6.jpg" alt="Best Seller" class="best-seller">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </section>
+    
+    <!-- End Best Sellers -->       
 
 
 
