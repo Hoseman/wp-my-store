@@ -1,0 +1,670 @@
+body {
+  padding-top: 0px;
+  color: #36393d;
+  background: #282a2d;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200; }
+
+body.ah-99::before {
+  background: #000;
+  content: "";
+  opacity: 0.88;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  animation-name: example;
+  animation-duration: 0.5s; }
+
+@keyframes example {
+  from {
+    background-color: transparent; }
+  to {
+    background-color: #000; } }
+
+body > section {
+  padding: 50px 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  font-family: 'Raleway', sans-serif; }
+
+a {
+  color: #36393d;
+  cursor: pointer; }
+
+/* Main Navigation Bar */
+.home .main-navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 3.3rem 3.1rem 4rem 4.0rem;
+  height: 100px;
+  z-index: 2;
+  color: #fff; }
+  .home .main-navigation img {
+    width: 210px; }
+  .home .main-navigation .navigation a {
+    float: right;
+    display: block;
+    color: #fff; }
+    .home .main-navigation .navigation a i {
+      font-size: 1.59rem;
+      padding: 0.2rem 1rem;
+      margin-top: 9px; }
+  .home .main-navigation .navigation {
+    opacity: 0.8; }
+    .home .main-navigation .navigation .hamburger {
+      float: right;
+      padding: 4px 15px;
+      cursor: pointer;
+      margin-top: 9px; }
+
+.uk-photography .main-navigation {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 3.3rem 3.1rem 4rem 4.0rem;
+  height: 100px;
+  z-index: 2;
+  color: #fff; }
+  .uk-photography .main-navigation img {
+    width: 210px; }
+  .uk-photography .main-navigation .navigation a {
+    float: right;
+    display: block;
+    color: #fff; }
+    .uk-photography .main-navigation .navigation a i {
+      font-size: 1.59rem;
+      padding: 0.2rem 1rem;
+      margin-top: 9px; }
+  .uk-photography .main-navigation .navigation {
+    opacity: 0.8; }
+    .uk-photography .main-navigation .navigation .hamburger {
+      float: right;
+      padding: 4px 15px;
+      cursor: pointer;
+      margin-top: 9px; }
+
+/* Main Navigation Bar */
+/* Main Menu */
+.main-menu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 340px; }
+  .main-menu ul {
+    list-style-type: none !important;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    margin-left: -22px;
+    letter-spacing: 0.08rem; }
+
+.menu-active {
+  display: block !important; }
+
+.menu-active a {
+  display: block !important;
+  animation-name: example2;
+  animation-duration: 1.5s;
+  color: #fff;
+  transition: all 0.15s ease-in; }
+
+.menu-active a:hover {
+  text-decoration: none;
+  color: #999; }
+
+@keyframes example2 {
+  from {
+    color: transparent; }
+  to {
+    color: #fff; } }
+
+.main-nav-toggle {
+  background: #111 !important;
+  position: fixed !important;
+  padding-top: 1.3rem !important;
+  padding-bottom: 0rem !important;
+  height: 90px !important;
+  animation-name: example3 !important;
+  animation-duration: 0.5s !important;
+  z-index: 99; }
+
+@keyframes example3 {
+  from {
+    background: transparent !important; }
+  to {
+    background: #111 !important; } }
+
+/* Main Menu */
+/* Main Slider v2 */
+#myCarousel {
+  padding: 0; }
+  #myCarousel h1 {
+    font-size: 4.1rem;
+    letter-spacing: 0.4rem;
+    opacity: 0.85; }
+  #myCarousel h4 {
+    font-weight: 200;
+    letter-spacing: 0.7rem;
+    font-size: 1.0rem;
+    margin-top: 20px; }
+  #myCarousel .carousel-caption .btn {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 0;
+    margin-top: 30px;
+    background-color: transparent;
+    padding: 11px 25px 11px 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    opacity: 0.8; }
+  #myCarousel .carousel-caption .btn:hover {
+    background-color: rgba(0, 0, 0, 0.15); }
+  #myCarousel .carousel-caption i {
+    font-size: 3rem; }
+
+.carousel-indicators {
+  position: relative;
+  margin-top: -30px;
+  z-index: 1 !important; }
+
+.carousel {
+  margin-bottom: 4rem; }
+
+.carousel-caption {
+  top: 22rem;
+  z-index: 10;
+  right: 3%;
+  left: 3%; }
+
+.carousel-item {
+  height: 55rem; }
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 55rem; }
+
+#chevron {
+  position: relative;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 6px;
+  height: 1.4px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px; }
+
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+  transform: skew(0deg, 44deg); }
+
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  transform: skew(0deg, -46deg); }
+
+/* Main Slider v2 */
+/* About */
+#about {
+  text-align: center; }
+  #about h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    letter-spacing: 0.1rem; }
+  #about p {
+    font-size: 1.01rem;
+    color: #999;
+    line-height: 2.3rem;
+    letter-spacing: 0.07rem; }
+
+#about-generic {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#131516+0,090d11+100&0.27+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(19, 21, 22, 0.27) 0%, rgba(9, 13, 17, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(19, 21, 22, 0.27) 0%, rgba(9, 13, 17, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(19, 21, 22, 0.27) 0%, rgba(9, 13, 17, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45131516', endColorstr='#00090d11',GradientType=0 );
+  /* IE6-9 */ }
+  #about-generic h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    letter-spacing: 0.1rem; }
+  #about-generic p {
+    font-size: 1.01rem;
+    color: #999;
+    line-height: 2.3rem;
+    letter-spacing: 0.07rem; }
+
+#about-singular {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px; }
+  #about-singular .large-picture {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column; }
+    #about-singular .large-picture .single-image-large {
+      flex: 1; }
+  #about-singular h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    letter-spacing: 0.1rem; }
+  #about-singular p {
+    font-size: 1.01rem;
+    color: #999;
+    line-height: 2.3rem;
+    letter-spacing: 0.07rem; }
+  #about-singular ul {
+    margin: 15px 0px 0px -65px; }
+    #about-singular ul li {
+      display: inline;
+      font-size: 0.9rem;
+      color: #999;
+      line-height: 2.3rem;
+      letter-spacing: 0.07rem; }
+  #about-singular .icon {
+    width: 22px;
+    margin: 0px 7px 0px 30px;
+    opacity: 0.8; }
+
+/* About */
+/* Home Gallery */
+#home-gallery .home-gallery-container {
+  max-width: 1400px; }
+
+#home-gallery img {
+  width: 100%;
+  transition: all 0.5s ease-in; }
+
+#home-gallery .col-md-4 {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+#home-gallery .col-sm-6 {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+#home-gallery .img-hover-zoom {
+  height: 303px;
+  overflow: hidden;
+  /*transition: all 0.5s ease-in;*/ }
+  #home-gallery .img-hover-zoom img {
+    transition: transform 0.5s ease; }
+
+#home-gallery .img-hover-zoom:hover img {
+  transform: scale(1.03);
+  filter: grayscale(100%); }
+
+#home-gallery .img-hover-zoom h5 {
+  transition: transform 0.5s ease;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  z-index: 1;
+  font-size: 90%; }
+
+#home-gallery .img-hover-zoom:hover h5 {
+  transition: transform 0.5s ease;
+  opacity: 0.9;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 90%; }
+
+.home-gallery-row {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* Home Gallery */
+/* 4 tabs */
+#fourtabbed {
+  max-width: 1400px;
+  margin: 0px auto 50px auto;
+  transition: all 0.5s ease-in; }
+  #fourtabbed a {
+    text-decoration: none; }
+  #fourtabbed img {
+    width: 100%;
+    margin: 0rem; }
+    #fourtabbed img:hover {
+      filter: grayscale(100%); }
+  #fourtabbed .fourtabbed-heading {
+    text-align: center;
+    background-color: #212326;
+    color: #999;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    transition: all 0.5s ease-in; }
+  #fourtabbed .fourtabbedbox:hover {
+    box-shadow: 0px 0px 20px #222; }
+    #fourtabbed .fourtabbedbox:hover img {
+      filter: grayscale(60%); }
+  #fourtabbed .fourtabbedbox:hover .fourtabbed-heading {
+    background: #111; }
+
+/* 4 tabs */
+/* footer */
+#footer {
+  color: #666;
+  font-size: 0.8rem;
+  background: #212326;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  letter-spacing: 0.02rem; }
+  #footer .footer-social-icons {
+    margin-top: 85px; }
+  #footer .scrolltop {
+    background: #36393d;
+    font-size: 1.9rem;
+    padding: 0.0rem 0.8rem 0.5rem 0.8rem;
+    line-height: 1.3rem;
+    -webkit-border-top-left-radius: 0.25rem;
+    -webkit-border-top-right-radius: 0.25rem;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 0.25rem;
+    -moz-border-radius-topright: 0.25rem;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  #footer a {
+    color: #666;
+    transition: all 0.2s ease-in; }
+  #footer a:hover {
+    color: gray;
+    text-decoration: none; }
+  #footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  #footer ul > li {
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+    background: #36393d;
+    padding: 0.55rem 0.7rem 0.45rem 0.7rem;
+    border-radius: 0.3rem; }
+  #footer i {
+    font-size: 1.2rem; }
+  #footer img {
+    width: 165px;
+    opacity: 0.35;
+    margin-bottom: 7px; }
+  #footer .copyright-padding {
+    padding-top: 14px; }
+  #footer .footer-container {
+    max-width: 1400px; }
+  #footer .footer-copyright {
+    margin-top: 20px;
+    display: block; }
+
+/* footer */
+/* UK Photography Page */
+hr {
+  margin-top: 2.2rem;
+  margin-bottom: 0rem;
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+  border-top: 1px solid rgba(100, 100, 100, 0.3); }
+
+#disclaimer p {
+  font-size: 0.85rem;
+  color: #999;
+  line-height: 1.9rem;
+  letter-spacing: 0.07rem;
+  text-align: center; }
+
+/* UK Photography Page */
+/* Singular page  */
+.close-window {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 1.3rem;
+  opacity: 0.5;
+  transition: all 0.2s ease-in; }
+  .close-window:hover {
+    opacity: 1; }
+  .close-window a {
+    padding: 0px 6px 2px 6px;
+    opacity: 0.8;
+    border: 1px solid #fff; }
+    .close-window a i {
+      color: #fff;
+      display: inline-block;
+      line-height: 0.3rem;
+      font-size: 1.19rem; }
+
+@media only screen and (max-width: 1490px) {
+  body > section {
+    padding: 35px 0; }
+  #myCarousel h1 {
+    font-size: 3.7rem; }
+  .home .main-navigation, .uk-photography .main-navigation {
+    padding: 2.2rem 1.8rem 4.9rem 2.6rem; }
+  #home-gallery .home-gallery-container {
+    max-width: 1200px; }
+  #fourtabbed .fourtabbed-container {
+    max-width: 1200px; }
+  #footer .footer-container {
+    max-width: 1200px; }
+  #home-gallery .img-hover-zoom {
+    height: 260px; }
+  hr {
+    margin-top: 0.15rem; } }
+
+@media only screen and (max-width: 1390px) {
+  #home-gallery .home-gallery-container {
+    max-width: 1100px; }
+  #fourtabbed .fourtabbed-container {
+    max-width: 1100px; }
+  #footer .footer-container {
+    max-width: 1100px; }
+  #home-gallery .img-hover-zoom {
+    height: 236px; }
+  #about p, #about-generic p {
+    font-size: 1.01rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.07rem;
+    padding: 0 1.5rem 0 1.5rem; } }
+
+@media only screen and (max-width: 1150px) {
+  #home-gallery .home-gallery-container {
+    max-width: 950px; }
+  #fourtabbed .fourtabbed-container {
+    max-width: 950px; }
+  #footer .footer-container {
+    max-width: 950px; }
+  #home-gallery .img-hover-zoom {
+    height: 205px; }
+  #about p, #about-generic p {
+    font-size: 1rem;
+    line-height: 2.0rem; } }
+
+@media only screen and (max-width: 1050px) {
+  body > section {
+    padding: 0px 0 60px 0; }
+  #myCarousel h1 {
+    font-size: 3.3rem; }
+  #home-gallery .home-gallery-container {
+    max-width: 860px; }
+  #fourtabbed .fourtabbed-container {
+    max-width: 860px; }
+  #home-gallery .img-hover-zoom {
+    height: 183px; }
+  #about p, #about-generic p {
+    font-size: 0.95rem;
+    line-height: 2.0rem; } }
+
+@media only screen and (max-width: 920px) {
+  #myCarousel h1 {
+    font-size: 3.3rem;
+    margin-top: -30px; }
+  #home-gallery .home-gallery-container {
+    max-width: 96%; }
+  #fourtabbed .fourtabbed-container {
+    max-width: 96%; }
+  #footer .footer-container {
+    max-width: 96%; }
+  #home-gallery .img-hover-zoom {
+    height: auto; }
+  .home .main-navigation img, .uk-photography .main-navigation img {
+    width: 195px; }
+  .home .main-navigation .navigation a i, .uk-photography .main-navigation .navigation a i {
+    font-size: 1.49rem;
+    margin-top: 2px; }
+  .home .main-navigation .navigation .hamburger, .uk-photography .main-navigation .navigation .hamburger {
+    margin-top: 0px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 28px;
+    height: 1.7px; }
+  .hamburger-box {
+    width: 32px; }
+  hr {
+    margin-top: -0.2rem; } }
+
+@media only screen and (max-width: 767px) {
+  #footer .pull-right {
+    float: left;
+    margin-top: 30px; }
+  .scrolltop {
+    float: right !important; } }
+
+@media only screen and (max-width: 700px) {
+  #myCarousel h1 {
+    font-size: 2.6rem;
+    margin-top: -30px; }
+  #myCarousel h4 {
+    letter-spacing: 0.6rem;
+    font-size: 0.7rem; }
+  #myCarousel .carousel-caption .btn {
+    padding: 11px 25px 11px 25px;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    margin-top: 20px; } }
+
+@media only screen and (max-width: 480px) {
+  #myCarousel h1 {
+    font-size: 2.3rem;
+    margin-top: -30px; }
+  #myCarousel h4 {
+    letter-spacing: 0.4rem;
+    font-size: 0.7rem; }
+  #myCarousel .carousel-caption .btn {
+    padding: 11px 25px 11px 25px;
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem; }
+  .home .main-navigation .navigation a i, .uk-photography .main-navigation .navigation a i {
+    display: none; }
+  .home .main-navigation, .uk-photography .main-navigation {
+    padding: 1.4rem 0.2rem 1.4rem 1.4rem;
+    height: auto; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 28px;
+    height: 2.2px !important; }
+  #about p, #about-generic p {
+    font-size: 0.8rem;
+    line-height: 1.7rem;
+    padding: 0 0.5rem 0 0.5rem; }
+  body > section {
+    padding: 0px 0 30px 0; }
+  #about h2, #about-generic h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    margin-top: -15px;
+    letter-spacing: 0.1rem;
+    padding: 0px 1.5rem 0px 1.5rem; }
+  #footer i {
+    font-size: 0.95rem; } }
+
+@media only screen and (max-width: 380px) {
+  #myCarousel h1 {
+    font-size: 1.9rem;
+    margin-top: -30px;
+    letter-spacing: 0.15rem; }
+  #myCarousel h4 {
+    letter-spacing: 0.3rem;
+    font-size: 0.6rem; }
+  #myCarousel .carousel-caption .btn {
+    padding: 11px 25px 11px 25px;
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+    margin-top: 20px; }
+  #chevron {
+    margin-top: 50px; }
+  #about h2, #about-generic h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    padding: 0px 1.5rem 0px 1.5rem; }
+  #about p, #about-generic p {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    padding: 0 0.5rem 0 0.5rem; }
+  .home .main-navigation img, .uk-photography .main-navigation img {
+    width: 155px; }
+  .main-menu ul {
+    font-size: 1.3rem; } }
