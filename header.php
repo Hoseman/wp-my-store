@@ -50,7 +50,14 @@
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
         </div>
         <div class="menu-right">
-            <a href="#">Shopping Cart</a><a href="#">My Account <i class="fa fa-angle-down" aria-hidden="true"></i></a><a href="#"> <span class="menu-text">CART</span> </a>
+			<ul>
+				 <li><a href="#">Shopping Cart</a></li>
+				 <li><a href="#">My Account <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+				 <li><a href="#"> <span class="menu-text">CART</span> </a></li>
+			</ul>
+			
+			
+			
         </div>
     </div>    
 </header>
