@@ -109,7 +109,7 @@ get_header();
                     while ($featured_query->have_posts()) : 
                     
                         $featured_query->the_post();
-                        
+                        $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );                        
                         $product = wc_get_product( $featured_query->post->ID );
                         $price = $product->get_price_html();
                         
@@ -117,7 +117,9 @@ get_header();
 
                 <div class="col-6 col-md-3 col-sm-6">
                 <a href="<?php the_permalink(); ?>">
-                        <?php echo woocommerce_get_product_thumbnail(); ?>
+                        <?php //echo woocommerce_get_product_thumbnail(); ?>
+                        <img src="<?php echo $backgroundImg[0]; ?>" alt="Featured Products">
+                        
                 </a>
                     <h5><?php the_title(); ?></h5>
                     <p>Accessories, Men</p>
@@ -186,24 +188,53 @@ get_header();
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-1.jpg" alt="Best Seller" class="best-seller">
-                            </div>
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-2.jpg" alt="Best Seller" class="best-seller">
-                            </div>
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-3.jpg" alt="Best Seller" class="best-seller">
-                            </div>
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-4.jpg" alt="Best Seller" class="best-seller">
-                            </div>
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-5.jpg" alt="Best Seller" class="best-seller">
-                            </div>
-                            <div class="item">
-                                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/best-seller-6.jpg" alt="Best Seller" class="best-seller">
-                            </div>
+
+
+
+                            <?php
+                            $number = 10;
+                                $args = array(
+                                    'posts_per_page' => $number,
+                                    'post_status'    => 'publish',
+                                    'post_type'      => 'product',
+                                    'no_found_rows'  => 1,
+                                    'meta_key'       => 'total_sales',
+                                    'orderby'        => 'meta_value_num',
+                                    'order'          => 'desc',
+                                    'meta_query'     => array(),
+                                    'tax_query'      => array(
+                                        'relation' => 'AND',
+                                    ),
+                                );
+                                
+                                $featured_query = new WP_Query( $args );
+                                    
+                                if ($featured_query->have_posts()) {
+                                
+                                    while ($featured_query->have_posts()) : 
+                                    
+                                        $featured_query->the_post();
+                                        $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); 
+                                        $product = wc_get_product( $featured_query->post->ID );
+                                        $price = $product->get_price_html();
+                                        
+                                ?>
+
+
+
+                                <div class="item">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php //echo woocommerce_get_product_thumbnail(); ?>
+                                        <img src="<?php echo $backgroundImg[0]; ?>" alt="Featured Products">
+                                    </a>
+                                </div>            
+
+
+                                <?php
+                                    endwhile;
+                                }
+                                ?>
+
 
                         </div>
                     </div>
@@ -213,61 +244,6 @@ get_header();
             </section>
     
     <!-- End Best Sellers -->       
-
-
-
-
-
-
-
-
-        <!-- BEST SELLING PRODUCTS -->
-        <h1>Best Selling Products</h1>
-        <?php
-        $number = 6;
-            $args = array(
-                'posts_per_page' => $number,
-                'post_status'    => 'publish',
-                'post_type'      => 'product',
-                'no_found_rows'  => 1,
-                'meta_key'       => 'total_sales',
-                'orderby'        => 'meta_value_num',
-                'order'          => 'desc',
-                'meta_query'     => array(),
-                'tax_query'      => array(
-                    'relation' => 'AND',
-                ),
-            );
-            
-            $featured_query = new WP_Query( $args );
-                
-            if ($featured_query->have_posts()) {
-            
-                while ($featured_query->have_posts()) : 
-                
-                    $featured_query->the_post();
-                    
-                    $product = wc_get_product( $featured_query->post->ID );
-                    $price = $product->get_price_html();
-                    
-            ?>
-            <div class="featured-product">
-                <a href="<?php the_permalink(); ?>">
-                    <?php echo woocommerce_get_product_thumbnail(); ?>
-                </a>
-                <a href="<?php the_permalink(); ?>">
-                    <h3><?php the_title(); ?></h3>
-                </a>
-                <?php echo $price; ?>
-            </div>
-            <?php
-                    
-                    
-                endwhile;
-                
-            }
-            ?>
-        <!-- BEST SELLING PRODUCTS -->
 
 
 
@@ -281,7 +257,7 @@ get_header();
                         <p>Vivamus tempor leo lacus, feugiat ut magna aliquam erat.</p>
                         <a class="btn btn-carousel">VIEW MORE</a>
                     </div>
-                    <img src="images/promo-box-1.jpg" class="two-panels-img-1">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/promo-box-1.jpg" class="two-panels-img-1">
                 </div>
                 <div class="col-sm-6">
                     <div class="promo-box-text box-2">
@@ -289,12 +265,126 @@ get_header();
                         <p>Vivamus tempor leo lacus, feugiat ut magna aliquam erat.</p>
                         <a class="btn btn-carousel">VIEW MORE</a>
                     </div>
-                    <img src="images/promo-box-2.jpg" class="two-panels-img-2">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/promo-box-2.jpg" class="two-panels-img-2">
                 </div>
             </div>
         </div>
     </section>
     <!-- Two Panels -->
+
+
+
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+        <div class="container testimonials text-center">
+
+            <div id="carouselExampleControls2" class="carousel slide carousel-fade" data-ride="carousel">
+
+ 
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="carousel-text">
+                          <div class="profile-pic"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/profile-pic-1.png"></div>
+                        <em>Curabitur non tristique tortor. Vestibulum aliquet suscipit ipsum in volutpat. Donec vel lacinia sem, vitae semper nulla. In hac habitasse platea dictumst. Mauris consectetur est et nibh sadip hendrerit bibendum. </em>
+                        <h5>Elana Jones, Bletchley MK</h5>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div class="carousel-text">
+                        <div class="profile-pic"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/profile-pic-2.png"></div>
+                        <em>Proin blandit metus vel magna dignissim varius. Morbi enim lorem, sollicitudin vitae ante nec, rutrum venenatis neque. In mi augue, iaculis nec dui ac, condimentum consequat velit. Ut et metus justo. </em>
+                        <h5>Lisa Smith, Peterborough</h5>
+    
+                    </div>
+                  </div>
+
+                </div>
+
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                  </ol>
+
+              </div>
+                <!-- <img src="images/testimonial-bg.jpg" alt="testimonials"> -->
+        </div>
+    </section>
+    <!-- Testimonials -->
+
+
+    <!-- From Our Blog -->
+    <section id="blog" class="text-center">
+        <div class="section-heading">
+            <span class="underline-left"></span>
+            <h2>From Our Blog</h2>
+            <span class="underline-right"></span>
+        </div>
+        <h4>The latest Classic Shop news</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-left">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/blog-1.jpg" alt="Blog 1">
+                    <h5>Aenean lobortis sapien enim viverra</h5>
+                    <p class="date">September 9th, 2015|0 Comments</p>
+                    <p>Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla</p>
+                </div>
+                <div class="col-sm-4 text-left">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/blog-2.jpg" alt="Blog 2">
+                    <h5>Aenean lobortis sapien enim viverra</h5>
+                    <p class="date">September 9th, 2015|0 Comments</p>
+                    <p>Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,</p>
+                </div>
+                <div class="col-sm-4 text-left">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/blog-3.jpg" alt="Blog 3">
+                    <h5>Aenean lobortis sapien enim viverra</h5>
+                    <p class="date">September 9th, 2015|0 Comments</p>
+                    <p>Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- From Our Blog -->
+
+    <!-- Brand Logos -->
+    <section id="brand-logos" class="text-center">
+        <h4>BRAND LOGOS</h4>
+        <div class="container text-left">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-1.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-2.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-3.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-4.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-5.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-6.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                        <div class="item">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-7.png" alt="Brand Logo" class="brand-logo">
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <!-- Brand Logos -->
 
 
 
