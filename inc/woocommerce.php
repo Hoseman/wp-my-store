@@ -118,7 +118,8 @@ if ( ! function_exists( 'my_store_woocommerce_wrapper_before' ) ) {
 	 */
 	function my_store_woocommerce_wrapper_before() {
 		?>
-			<main id="primary" class="site-main">
+			<main id="primary" class="site-main shop-wrapper">
+			<div class="shop-container">
 		<?php
 	}
 }
@@ -134,6 +135,7 @@ if ( ! function_exists( 'my_store_woocommerce_wrapper_after' ) ) {
 	 */
 	function my_store_woocommerce_wrapper_after() {
 		?>
+			</div>
 			</main><!-- #main -->
 		<?php
 	}

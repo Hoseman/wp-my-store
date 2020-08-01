@@ -20,7 +20,17 @@
     <meta name="author" content="">
     <title>Shop Theme | By Andrew Hosegood</title>
 
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	
+	<?php 
+		if ( is_user_logged_in() ) {
+	?>
+		<style>.main-nav-toggle { top: 30px !important; }</style>
+	<?php		
+		 } 
+	?>
+
+	
 
 	<?php wp_head(); ?>
 </head>
@@ -55,7 +65,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
-        <ul class="navbar-nav ml-auto">
+	  <?php
+			wp_nav_menu( array(
+				'menu' => 'top_menu',
+				'depth' => 2,
+				'container' => false,
+				'menu_class' => 'navbar-nav ml-auto',
+				'walker' => new wp_bootstrap_navwalker())
+			);
+		?>
+
+        <!-- <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
             <a class="nav-link" href="#">Home </a>
             </li>
@@ -77,7 +97,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#"><span class="shop-now">SHOP NOW!</span></a>
             </li>
-        </ul>
+        </ul> -->
 
         <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -88,14 +108,14 @@
 <!-- End Main Nav -->
 
 
+
 <?php
+//the_custom_logo();
 
-// the_custom_logo();
-
-// 	wp_nav_menu(
-// 		array(
-// 			'theme_location' => 'menu-1',
-// 			'menu_id'        => 'primary-menu',
-// 		)
-// 	);
+	// wp_nav_menu(
+	// 	array(
+	// 		'theme_location' => 'menu-1',
+	// 		'menu_id'        => 'primary-menu',
+	// 	)
+	// );
 ?>

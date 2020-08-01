@@ -228,3 +228,60 @@ function cc_mime_types($mimes) {
   }
   add_filter('upload_mimes', 'cc_mime_types');
   /* Enable SVG Support */
+
+
+// 1. download the navwalker class from: https://github.com/wp-bootstrap/wp-bootstrap-navwalker
+// 2. add the class-wp-bootstrap-navwalker.php to the root of the theme folder 
+// 3. add require once to include the navwalker class (below)
+// https://code.tutsplus.com/tutorials/how-to-integrate-a-bootstrap-navbar-into-a-wordpress-theme--wp-33410
+require_once('class-wp-bootstrap-navwalker.php');
+
+// Add theme theme support for hi res thumbnails
+// https://mikeyarce.com/2018/04/how-to-override-woocommerce-image-sizes/
+
+add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
+	return array(
+		'width'  => 400,
+		'height' => 500,
+		'crop'   => 1,
+	);
+} );
+// Add theme theme support for hi res thumbnails
+
+
+
+
+
+
+
+
+
+
+
+// function woa_content_before_shop() {
+//     echo '<div class="container">' ;
+// }
+// add_action( 'woocommerce_before_shop_loop', 'woa_content_before_shop');
+
+
+// function woa_content_after_shop() {
+//     echo '</div>' ;
+// }
+// add_action( 'woocommerce_after_shop_loop', 'woa_content_after_shop');
+
+
+// add_theme_support( 'woocommerce', array(
+// 	'thumbnail_image_width' => 420,
+// 	'gallery_thumbnail_image_width' => 600,
+// 	'single_image_width' => 600,
+// 	) );
+
+
+	// add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+	// 	return array(
+	// 	'width' => 420,
+	// 	'height' => 420,
+	// 	'crop' => 0,
+	// 	);
+	// 	} );	
+
