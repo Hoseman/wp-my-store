@@ -52,7 +52,7 @@
         <div class="menu-right">
 			<ul>
 				 <li><a href="#">Shopping Cart</a></li>
-				 <li><a href="#">My Account <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+				 <li><a href="/my-account/">My Account <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
 				 <li><a href="#"> <span class="menu-text">CART</span> </a></li>
 			</ul>
 			
